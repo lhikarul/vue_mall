@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home'
+import Index from '../views/Index'
 
 Vue.use(VueRouter)
 
@@ -8,7 +9,15 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    redirect: "/index",
+    children: [
+      {
+        path: '/index',
+        name: 'index',
+        component: Index
+      }
+    ]
   }
 ]
 
