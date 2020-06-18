@@ -10,4 +10,17 @@ module.exports = {
             .set('@C', resolve('src/components'))
             .set('@style', resolve('src/resources/scss'))
     },
+    devServer:{
+        host:'localhost',
+        port:8080,
+        proxy:{
+          '/api':{
+            target:'http://mall-pre.springboot.cn',
+            changeOrigin:true,
+            pathRewrite:{
+              '/api':''
+            }
+          }
+        }
+    }
 }
