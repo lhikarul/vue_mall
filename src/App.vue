@@ -10,6 +10,6 @@
   }
 </script>
 
-<style lang="scss">
-
+<style>
+@import './resources/scss/reset.scss';
 </style>
